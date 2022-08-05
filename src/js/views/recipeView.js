@@ -1,9 +1,10 @@
 /////////////////////////////////////////////////////////////////////////////////////
 // 3. Importing parcel icon
 /////////////////////////////////////////////////////////////////////////////////////
+import View from './view'; // Parent Class
 import icons from 'url:../../img/icons.svg'; // parcel 2
-import Fraction from 'fractional';
-import View from './view.js'; // Parent Class
+//import Fraction from 'fractional';
+import fracty from 'fracty';
 
 /////////////////////////////////////////////////////////////////////////////////////
 // 2. Rendering the recipe
@@ -121,12 +122,12 @@ class RecipeView extends View {
               <use href="${icons}#icon-check"></use>
             </svg>
             <div class="recipe__quantity">${
-              ing.quantity ? new Fraction.Fraction(ing.quantity).toString() : ''
+              ing.quantity ? fracty(ing.quantity).toString() : ''
             }</div>
             <div class="recipe__description">
               <span class="recipe__unit">${ing.unit}</span>
               ${ing.description}
-            </div>
+            </div> 
           </li>`;
   }
 
