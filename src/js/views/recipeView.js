@@ -2,8 +2,8 @@
 // 3. Importing parcel icon
 /////////////////////////////////////////////////////////////////////////////////////
 import icons from 'url:../../img/icons.svg'; // parcel 2
-import { Fraction } from 'fractional';
-import View from './view'; // Parent Class
+import Fraction from 'fractional';
+import View from './view.js'; // Parent Class
 
 /////////////////////////////////////////////////////////////////////////////////////
 // 2. Rendering the recipe
